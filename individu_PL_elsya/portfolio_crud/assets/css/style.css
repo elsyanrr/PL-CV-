@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color:  #000000;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* KIRI — PINK MUDA & RAPI */
+.sidebar {
+    width: 300px;
+    background: #f3d0e1; /* Pink muda */
+    padding: 30px;
+    border-right: 1px solid #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.contact-info {
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-info p:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000000; /* Pink cerah untuk bullet */
+    margin-right: 8px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0;
+    background: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background:  #e3b5d4;
+}
+
+.btn-delete {
+    background: #000000;
+}
+
+.btn-delete:hover {
+    background: #dfbcd3;
+}
+
+/* CONTENT KANAN dalam cv*/
+.content {
+    flex: 1;
+    padding: 30px;
+    background: rgb(255, 255, 255);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h3 {
+    font-size: 20px;
+    color: #333;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+
+pre {  /* pengalaman*/
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 10px 0;
+}
+
+/* SKILLS SECTION */
+.skills-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-column {
+    flex: 1;
+    min-width: 200px;
+    background:white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.skill-column h4 {
+    margin-bottom: 10px;
+    color:  #000000;
+    font-size: 16px;
+}
+
+.skill-column ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skill-column li {
+    margin: 5px 0;
+    padding-left: 10px;
+    position: relative;
+}
+
+.skill-column li:before {
+    content: "•";
+    color: #ff7ed4;
+    position: absolute;
+    left: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+    .content {
+        padding: 20px;
+    }
+}
